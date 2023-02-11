@@ -1,0 +1,23 @@
+name: Pipeline and Merge to Main
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run pipeline
+        run: ./run-pipeline.sh
+
+      - name: Merge to main
+        uses: peaceiris/actions-merge-branch@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
