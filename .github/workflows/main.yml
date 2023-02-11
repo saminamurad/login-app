@@ -3,7 +3,7 @@ name: Pipeline and Merge to Main
 on:
   push:
     branches:
-      - dev
+      - loginapp1
 
 jobs:
   build-and-merge:
