@@ -16,8 +16,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: emadullah
-        aws-secret-access-key: Emadullah1*12
+        export aws-access-key-id: saminamurad
+        export aws-secret-access-key: Emadullah1*12
         aws-region: ap-northeast-1
 
     - name: Login to Amazon ECR
